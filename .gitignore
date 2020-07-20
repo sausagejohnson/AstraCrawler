@@ -1,0 +1,6 @@
+.vs/*
+AstraCrawler/bin/*
+AstraCrawler/obj/*
+AstraCrawler/wwwroot/*
+UnitTests/bin/Debug/*
+UnitTests/obj/*
