@@ -13,10 +13,11 @@ namespace AstraCrawler.Controllers
     {
         public IActionResult Index()
         {
-            HtmlElementScraper scraper = new HtmlElementScraper();
-            ResultLinkInfo info = scraper.GetResult(
-                "https://www.carsales.com.au/cars/holden/astra/r-badge/bk-series/hatch-bodystyle/manual-transmission/?sort=LastUpdated",
-                "/html/body/div[2]/div[3]/div[1]/div[1]/div[1]/div/h1"
+            HtmlElementScraper driveScraper = new HtmlElementScraper();
+            ResultLinkInfo info = driveScraper.GetResult(
+                "https://www.drive.com.au/car-sales?search=1&sortBy=1&priceMax=50000&make=Holden&model=Astra&location=&yearMin=2016&yearMax=&kmsMin=&kmsMax=&seller=&seats=&doors=&transmission=manual&body=&fuel=&color=&driveType=&features=&keywords=",
+                //"https://waynejohnson.net",
+                "/html/body/div[8]/div/main/div/div[1]/div[5]/div"
                 );
 
             return View();
