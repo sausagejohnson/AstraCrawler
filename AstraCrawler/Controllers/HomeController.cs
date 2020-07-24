@@ -13,14 +13,29 @@ namespace AstraCrawler.Controllers
     {
         public IActionResult Index()
         {
-            HtmlElementScraper driveScraper = new HtmlElementScraper();
-            ResultLinkInfo info = driveScraper.GetResult(
-                "https://www.drive.com.au/car-sales?search=1&sortBy=1&priceMax=50000&make=Holden&model=Astra&location=&yearMin=2016&yearMax=&kmsMin=&kmsMax=&seller=&seats=&doors=&transmission=manual&body=&fuel=&color=&driveType=&features=&keywords=",
-                //"https://waynejohnson.net",
-                "/html/body/div[8]/div/main/div/div[1]/div[5]/div"
-                );
+            bool onlyRunLastScraper = true;
 
+            HtmlElementScraper elementScraper = new HtmlElementScraper();
+
+            ResultLinkInfo info = new ResultLinkInfo();
+
+            List<ScrapeInfo> scrapeInfos = ScrapeInfo.LoadScrapeInfos();
+            for (int x=0; x<scrapeInfos.Count(); x++)
+            {
+                if (onlyRunLastScraper)
+                {
+                    x = scrapeInfos.Count() - 1;
+                }
+                info = elementScraper.GetResult(scrapeInfos[x]);
+            }
+
+
+            if (info != null)
+            {
+                return View(info);
+            }
             return View();
+
         }
 
         public IActionResult Privacy()

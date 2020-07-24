@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 
 namespace AstraCrawler.Domain
 {
-    public class ResultLinkInfo
+    public class Header
     {
         public string Name { get; set; }
-        public Uri Link { get; set; }
-        public string ResultText { get; set; }
+        public string Value { get; set; }
     }
 }

@@ -14,6 +14,6 @@ namespace AstraCrawler.Domain
         /// <param name="url"></param>
         /// <param name="xPathToResultText"></param>
         /// <returns></returns>
-        ResultLinkInfo GetResult(string url, string xPathToResultText );
+        ResultLinkInfo GetResult(ScrapeInfo scrapeInfo);
     }
 }
