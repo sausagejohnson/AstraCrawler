@@ -1,9 +1,89 @@
-﻿@model AstraCrawler.Domain.ResultLinkInfo
+﻿@model AstraCrawler.Models.DataListModel
 @{
     ViewData["Title"] = "Output Test";
 }
 
+<style>
+    .astra-row {
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 800px;
+        margin: 2px;
+    }
+
+    .astra-row div {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .astra-result {
+        background-color: #888888;
+        width: 200px;
+        border-radius: 4px;
+        padding: 3px;
+    }
+
+    .astra-result-success {
+        background-color: #88FF88;
+    }
+
+    .astra-result-fail {
+        background-color: #FF8888;
+    }
+
+    .astra-result-loading {
+        background-color: #FFFF88;
+    }
+</style>
+
 <div class="text-center">
-    <h1 class="display-4"><a href="@Model.Link">@Model.Name</a></h1>
-    <p>@Model.ResultText</p>
+    <h1 class="display-5"><a href="">Crawler</a></h1>
+    <p><button onclick="runall()">Run All</button></p>
 </div>
+
+<div class="astra-grid">
+    @foreach (var item in Model.List)
+    {
+    <div class="astra-row">
+        <div><a href="@item.Link.ToString()">@item.Name</a></div>
+        <div id="@item.Name" class="astra-result">---</div>
+        <div><a href="#" onclick="retrieve('@item.Name')">Go</a></div>
+    </div>
+    }
+</div>
+
+<script>
+    function retrieve(name) {
+        var el = document.getElementById(name);
+        el.classList.add('astra-result-loading');
+
+        fetch('api/' + name).then(function (response) {
+            response.json().then(function (data){
+                el.innerText = data.success ? 'Successful results' : 'Nothing';
+                el.classList.remove('astra-result-loading');
+                if (data.success) {
+                    el.classList.add('astra-result-success');
+                } else {
+                    el.classList.add('astra-result-fail');
+                }
+            });
+        });
+    }
+
+    function runall() {
+        fetch('api/').then(function (response) {
+            response.json().then(function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    var name = data[i];
+
+                    //setTimeout(function (n) { 
+                    //console.log(name);
+
+                    retrieve(name);
+                    //}, 1000 * i);
+                }
+            });
+        });
+    }
+</script>
+

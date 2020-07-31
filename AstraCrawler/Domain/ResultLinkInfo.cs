@@ -10,5 +10,6 @@ namespace AstraCrawler.Domain
         public string Name { get; set; }
         public Uri Link { get; set; }
         public string ResultText { get; set; }
+        public bool Success { get; set; }
     }
 }

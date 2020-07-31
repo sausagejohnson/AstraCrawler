@@ -13,6 +13,8 @@ namespace AstraCrawler.Domain
         public string Url { get; set; }
         public string XPath { get; set; }
         public List<Header> Headers { get; set; }
+        public string SuccessIndicator { get; set; }
+        public string FailureIndicator { get; set; }
 
         static public List<ScrapeInfo> LoadScrapeInfos()
         {

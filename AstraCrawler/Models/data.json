@@ -1,12 +1,14 @@
 [{
 	"name": "waynejohnson",
 	"url": "https://waynejohnson.net",
-	"xpath": "/html/body/div[3]/div[1]/p[1]"
+	"xpath": "/html/body/div[3]/div[1]/p[1]",
+	"successindicator": "Thank you"
 },
 {
 	"name": "Drive Manual",
 	"url": "https://www.drive.com.au/car-sales?search=1&sortBy=1&priceMax=50000&make=Holden&model=Astra&location=&yearMin=2016&yearMax=&kmsMin=&kmsMax=&seller=&seats=&doors=&transmission=manual",
 	"xpath": "/html/body/div[8]/div/main/div/div[1]/div[5]/div",
+	"successindicator": "results",
 	"headers": [{
 		"name": "Host",
 		"value": "www.drive.com.au"
@@ -22,10 +24,6 @@
 	{
 		"name": "Accept-Language",
 		"value": "en-AU,en;q=0.5"
-	},
-	{
-		"name": "Accept-Encoding",
-		"value": "gzip, deflate, br"
 	},
 	{
 		"name": "DNT",
@@ -44,6 +42,7 @@
 	"name": "McGrath Regional",
 	"url": "https://mcgrathautogroup.com.au/new-demo-used-cars-canberra.html?make=Holden&model=Astra&gearbox=",
 	"xpath": "/html/body/div[1]/div[2]/div/div[2]/div[1]",
+	"successindicator": "<select",
 	"headers": [{
 		"name": "Host",
 		"value": "mcgrathautogroup.com.au"
@@ -76,4 +75,266 @@
 		"name": "TE",
 		"value": "Trailers"
 	}]
-}]
+},
+{
+	"name": "Autotrader in NSW",
+	"url": "https://www.autotrader.com.au/for-sale/used/holden/astra/r/nsw/over-2016/manual?state=nsw",
+	"xpath": "/html/body/div[1]/div/div/div[3]/section/div[3]/div[2]/div/div[1]/h1",
+	"successindicator": "Astra",
+	"headers": [{
+		"name": "Host",
+		"value": "www.autotrader.com.au"
+	},
+	{
+		"name": "Accept",
+		"value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+	},
+	{
+		"name": "Accept-Language",
+		"value": "en-AU,en;q=0.5"
+	},
+	{
+		"name": "DNT",
+		"value": "1"
+	},
+	{
+		"name": "Connection",
+		"value": "keep-alive"
+	},
+	{
+		"name": "TE",
+		"value": "Trailers"
+	}]
+},
+{
+	"name": "Autotrader in ACT",
+	"url": "https://www.autotrader.com.au/for-sale/used/holden/astra/r/act/over-2016/manual?state=act",
+	"xpath": "/html/body/div[1]/div/div/div[3]/section/div[3]/div[2]/div/div[1]/h1",
+	"successindicator": "Astra",
+	"headers": [{
+		"name": "Host",
+		"value": "www.autotrader.com.au"
+	},
+	{
+		"name": "Accept",
+		"value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+	},
+	{
+		"name": "Accept-Language",
+		"value": "en-AU,en;q=0.5"
+	},
+	{
+		"name": "DNT",
+		"value": "1"
+	},
+	{
+		"name": "Connection",
+		"value": "keep-alive"
+	},
+	{
+		"name": "TE",
+		"value": "Trailers"
+	}]
+},
+{
+	"name": "Canberra Toyota",
+	"url": "https://www.canberratoyota.com.au/used-car/holden/astra/?yearfrom=2016",
+	"xpath": "/html/body/form/div[3]/div[2]/div",
+	"successindicator": "Astra",
+	"headers": [{
+		"name": "Host",
+		"value": "www.canberratoyota.com.au"
+	},
+	{
+		"name": "Accept",
+		"value": "text/css,*/*;q=0.1"
+	},
+	{
+		"name": "Accept-Language",
+		"value": "en-AU,en;q=0.5"
+	},
+	{
+		"name": "DNT",
+		"value": "1"
+	},
+	{
+		"name": "Connection",
+		"value": "keep-alive"
+	}]
+},
+{
+	"name": "Lennock Canberra",
+	"url": "https://www.lennockused.com.au/stock/used/holden/astra?yearfrom=2016&yearto=2021",
+	"xpath": "/html/body/main/div[2]/div/div[1]/div[1]/h1",
+	"successindicator": "Astra",
+	"headers": [
+            {
+              "name": "Host",
+              "value": "www.lennockused.com.au"
+            },
+            {
+              "name": "Accept",
+              "value": "text/css,*/*;q=0.1"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-AU,en;q=0.5"
+            },
+            {
+              "name": "DNT",
+              "value": "1"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            }
+          ]
+},
+{
+	"name": "House Of Cars Canberra",
+	"url": "http://www.braddonautomart.com.au/used-cars-in-fyshwick/holden-astra-2016---manual---?sort=&yard=&stockstatus=&regostate=&stockuse=&stockdemo=",
+	"xpath": "/html/body/main/div[2]/div/div[1]/div[1]/h1",
+	"successindicator": "Astra",
+	"headers": [
+            {
+              "name": "Host",
+              "value": "www.lennockused.com.au"
+            },
+            {
+              "name": "Accept",
+              "value": "text/css,*/*;q=0.1"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-AU,en;q=0.5"
+            },
+            {
+              "name": "DNT",
+              "value": "1"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            }
+          ]
+},
+{
+	"name": "Goulburn Motor Group",
+	"url": "http://www.goulburnmazda.com.au/vehicle-inventory/used/?filter_transmission=manual&filter_model=astra&filter_make=holden",
+	"xpath": "/html/body/div[1]/div/div[2]/div/div/p[1]",
+	"successindicator": "Showing",
+	"headers": [
+            {
+              "name": "Host",
+              "value": "www.goulburnmazda.com.au"
+            },
+            {
+              "name": "Accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-AU,en;q=0.5"
+            },
+			{
+              "name": "Accept-Encoding",
+              "value": "gzip;q=0, deflate"
+            },
+            {
+              "name": "DNT",
+              "value": "1"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Upgrade-Insecure-Requests",
+              "value": "1"
+            }
+          ]
+},
+
+{
+	"name": "Daniels Goulburn",
+	"url": "https://www.danielsautogroup.com.au/all-stock/list?q=%28%7Bmake%3AHolden%28model%3AAstra%29%7D%29%2Ccondition%3Aused%2Ctransmission%3AManual%2Cyear%3A2016-",
+	"xpath": "/html/body/div[1]/main/div/div/div/div/div/div/div/div/div[1]/div[1]/h1/small",
+	"successindicator": "Found",
+	"headers": [
+            {
+              "name": "Host",
+              "value": "www.danielsautogroup.com.au"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
+            },
+            {
+              "name": "Accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-AU,en;q=0.5"
+            },
+            {
+              "name": "Referer",
+              "value": "https://www.danielsautogroup.com.au/all-stock/list?q=(%7Bmake:Holden,model:Astra%7D),condition:used"
+            },
+            {
+              "name": "DNT",
+              "value": "1"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Upgrade-Insecure-Requests",
+              "value": "1"
+            },
+            {
+              "name": "TE",
+              "value": "Trailers"
+            }
+          ]
+},
+
+{
+	"name": "John McGrath Canberra",
+	"url": "https://johnmcgrathkia.com.au/new-demo-used-cars-canberra.html?make=Holden&model=Astra&gearbox=Manual",
+	"xpath": "/html/body/div[1]/div[3]/div/div[2]/div[1]",
+	"failureindicator": "We always have a great selection of cars available",
+	"headers": [
+            {
+              "name": "Host",
+              "value": "johnmcgrathkia.com.au"
+            },
+            {
+              "name": "Accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-AU,en;q=0.5"
+            },
+            {
+              "name": "DNT",
+              "value": "1"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Upgrade-Insecure-Requests",
+              "value": "1"
+            },
+            {
+              "name": "TE",
+              "value": "Trailers"
+            }
+          ]
+}
+
+]

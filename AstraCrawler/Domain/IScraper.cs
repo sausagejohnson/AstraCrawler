@@ -15,5 +15,7 @@ namespace AstraCrawler.Domain
         /// <param name="xPathToResultText"></param>
         /// <returns></returns>
         ResultLinkInfo GetResult(ScrapeInfo scrapeInfo);
+
+        bool DetermineSuccess(ScrapeInfo info, string html);
     }
 }

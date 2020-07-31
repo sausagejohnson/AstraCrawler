@@ -19,8 +19,16 @@ namespace AstraCrawler.Domain
             HtmlDocument document = new HtmlDocument();
             document.LoadHtml(html);
 
-            HtmlNode node = document.DocumentNode.SelectSingleNode(xpath);
-            return node.InnerHtml;
+            try
+            {
+                HtmlNode node = document.DocumentNode.SelectSingleNode(xpath);
+                return node.InnerHtml;
+
+            } catch(Exception ex)
+            {
+                return "XPath error";
+            }
+
         }
     }
 }

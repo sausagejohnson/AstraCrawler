@@ -37,22 +37,18 @@ namespace AstraCrawler.Controllers
             return info;
         }
 
-        // POST: api/Api
-        [HttpPost]
-        public void Post([FromBody] string value)
+        // GET: Ping
+        [HttpGet("ping")]
+        public string Ping()
         {
+            return "Ping!";
         }
 
-        // PUT: api/Api/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpGet("ping/{stuff}", Name = "Ping_String")]
+        public string Ping(string stuff)
         {
+            return stuff;
         }
 
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }
